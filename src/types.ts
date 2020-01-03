@@ -1,6 +1,6 @@
 const TYPES = {
-    HtmlFetcher: Symbol.for("HtmlFetcher"),
     AvailabilityChecker: Symbol.for("AvailabilityChecker"),
+    HtmlFetcher: Symbol.for("HtmlFetcher"),
 };
 
 export { TYPES };
