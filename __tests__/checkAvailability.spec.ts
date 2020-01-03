@@ -1,6 +1,6 @@
-const checkAvailability = require('../src/Domain/checkAvailability');
-const fs = require('fs');
-const path = require('path');
+import checkAvailability from '@app/Domain/checkAvailability';
+import * as fs from 'fs';
+import * as path from 'path';
 
 test('視聴可能ならばtrue', function() {
     const availableHtml = fs.readFileSync(path.join(__dirname, './sample/available.html'), 'UTF-8');

@@ -4,6 +4,7 @@
   "description": "Amazon Prime Videoのごちうさの死活監視用",
   "main": "index.js",
   "scripts": {
+    "lint": "tslint src/**/*.ts",
     "test": "jest"
   },
   "repository": {
@@ -18,9 +19,21 @@
   },
   "homepage": "https://github.com/wand2016/gochiusa_prime_video_monitoring#readme",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-typescript": "^7.7.7",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^13.1.2",
+    "@types/node-fetch": "^2.5.4",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4"
   },
   "dependencies": {
-    "node-fetch": "^2.6.0"
+    "inversify": "^5.0.1",
+    "node-fetch": "^2.6.0",
+    "reflect-metadata": "^0.1.13"
   }
 }
