@@ -15,6 +15,10 @@ module.exports = {
     "**/__tests__/**/*.(spec|test).ts"
   ],
   "moduleNameMapper": {
-    "^@app/(.+)$": "<rootDir>/src/$1"
-  }
+      "^@app/(.+)$": "<rootDir>/src/$1",
+      "^@tests/(.+)$": "<rootDir>/__tests__/$1"
+  },
+  "setupFiles": [
+    "./__tests__/inversify.config.ts"
+  ]
 }
