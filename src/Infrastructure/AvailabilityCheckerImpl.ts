@@ -18,6 +18,6 @@ export default class AvailabilityCheckerImpl implements AvailabilityChecker {
 
     public async checkAvailability(url: string): Promise<boolean> {
         const html = await this.htmlFetcher.fetchHtml(url);
-        return !html.match(/currently unavailable/);
+        return !html.match(/(currently unavailable|現在利用できません)/);
     }
 }

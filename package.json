@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "tslint src/**/*.ts __tests__/**/*.ts",
     "test": "jest",
-    "serverless": "sls offline start"
+    "deploy": "serverless deploy -v"
   },
   "repository": {
     "type": "git",

@@ -6,7 +6,7 @@ export const entrypoint = async () => {
     const service = container.get<GochiUsaMonitoring>(TYPES.GochiUsaMonitoring);
 
     try {
-        service.monitorContentsAndPublishMetrics();
+        await service.monitorContentsAndPublishMetrics();
         return {
             statusCode: 200,
             body: JSON.stringify({

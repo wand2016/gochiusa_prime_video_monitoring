@@ -9,7 +9,10 @@ plugins:
 provider:
   name: aws
   runtime: nodejs10.x
+  region: ap-northeast-1
+  stackName: gochiusa-monitoring
+  role: arn:aws:iam::646279979860:role/gochiusa_monitoring_metrics
 
 functions:
-  inversify:
+  gochiusa-monitoring:
     handler: src/handler.entrypoint

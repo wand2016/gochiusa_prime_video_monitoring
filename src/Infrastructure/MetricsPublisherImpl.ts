@@ -20,9 +20,10 @@ export default class MetricsPublisherImpl implements MetricsPublisher {
     }
 
     public async publishMetrics(contents: Content[]): Promise<void> {
-        return new Promise((resolve, reject) => {
+        const metrics = this.buildMetrics(contents);
+        return await new Promise((resolve, reject) => {
             this.cloudWatch.putMetricData(
-                this.buildMetrics(contents),
+                metrics,
                 (err, _) => {
                     if (err) {
                         reject(err);
