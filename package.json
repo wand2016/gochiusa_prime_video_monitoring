@@ -1,0 +1,23 @@
+{
+  "name": "gochiusa_prime_video_monitoring",
+  "version": "1.0.0",
+  "description": "Amazon Prime Videoのごちうさの死活監視用",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wand2016/gochiusa_prime_video_monitoring.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wand2016/gochiusa_prime_video_monitoring/issues"
+  },
+  "homepage": "https://github.com/wand2016/gochiusa_prime_video_monitoring#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
