@@ -26,8 +26,8 @@ class GochiUsaMonitoring {
 
     private async monitorContents(): Promise<Content[]> {
         const contentNamesAndUrls = {
-            '1期': 'https://www.amazon.co.jp/gp/video/detail/B014GMMG86/',
-            '2期': 'https://www.amazon.co.jp/gp/video/detail/B016PVQWQ8/',
+            '1st': 'https://www.amazon.co.jp/gp/video/detail/B014GMMG86/',
+            '2nd': 'https://www.amazon.co.jp/gp/video/detail/B016PVQWQ8/',
             'DMS': 'https://www.amazon.co.jp/gp/video/detail/B07FN4TGPK/',
             'SFY': 'https://www.amazon.co.jp/gp/video/detail/B0834N9MVX/',
         };
@@ -40,7 +40,7 @@ class GochiUsaMonitoring {
     }
 
     private async publishMetrics(contents: Content[]) {
-        this._metricsPublisher.publishMetrics(contents);
+        await this._metricsPublisher.publishMetrics(contents);
     }
 }
 

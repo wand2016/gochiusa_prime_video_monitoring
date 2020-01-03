@@ -33,6 +33,7 @@
     "typescript": "^3.7.4"
   },
   "dependencies": {
+    "aws-sdk": "^2.597.0",
     "inversify": "^5.0.1",
     "node-fetch": "^2.6.0",
     "reflect-metadata": "^0.1.13"
