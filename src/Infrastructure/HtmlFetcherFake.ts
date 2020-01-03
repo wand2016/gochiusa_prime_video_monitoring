@@ -1,12 +1,12 @@
-import HtmlFetcher from "./HtmlFetcher";
+import HtmlFetcher from "@app/Infrastructure/HtmlFetcher";
 import { injectable } from "inversify";
 
 @injectable()
 class HtmlFetcherFake implements HtmlFetcher {
-    constructor(private _html: string) { }
+    constructor(private html: string) { }
 
-    fetchHtml(_: string): Promise<string> {
-        return Promise.resolve(this._html);
+    public fetchHtml(_: string): Promise<string> {
+        return Promise.resolve(this.html);
     }
 }
 

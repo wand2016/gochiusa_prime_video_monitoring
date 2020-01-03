@@ -4,7 +4,7 @@ import { injectable } from "inversify";
 
 @injectable()
 class HtmlFetcherImpl implements HtmlFetcher {
-    async fetchHtml(url: string): Promise<string> {
+    public async fetchHtml(url: string): Promise<string> {
         return (await fetch(url)).text();
     }
 }

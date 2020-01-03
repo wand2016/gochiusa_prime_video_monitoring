@@ -8,16 +8,16 @@ export default class AvailabilityCheckerImpl implements AvailabilityChecker {
     /**
      * @readonly
      */
-    private _htmlFetcher: HtmlFetcher;
+    private htmlFetcher: HtmlFetcher;
 
     public constructor(
-        @inject(TYPES.HtmlFetcher) htmlFetcher: HtmlFetcher
+        @inject(TYPES.HtmlFetcher) htmlFetcher: HtmlFetcher,
     ) {
-        this._htmlFetcher = htmlFetcher;
+        this.htmlFetcher = htmlFetcher;
     }
 
-    async checkAvailability(url: string): Promise<boolean> {
-        const html = await this._htmlFetcher.fetchHtml(url);
+    public async checkAvailability(url: string): Promise<boolean> {
+        const html = await this.htmlFetcher.fetchHtml(url);
         return !html.match(/currently unavailable/);
     }
 }

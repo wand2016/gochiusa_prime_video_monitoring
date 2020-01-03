@@ -3,15 +3,15 @@ import { injectable } from "inversify";
 
 @injectable()
 export default class AvailabilityCheckerFake implements AvailabilityChecker {
-    private _availability: boolean;
+    private availability: boolean;
 
     public constructor(
-        availability: boolean
+        availability: boolean,
     ) {
-        this._availability = availability;
+        this.availability = availability;
     }
 
-    async checkAvailability(_: string): Promise<boolean> {
-        return Promise.resolve(this._availability);
+    public async checkAvailability(_: string): Promise<boolean> {
+        return Promise.resolve(this.availability);
     }
 }

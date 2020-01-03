@@ -4,7 +4,7 @@
   "description": "Amazon Prime Videoのごちうさの死活監視用",
   "main": "index.js",
   "scripts": {
-    "lint": "tslint src/**/*.ts",
+    "lint": "tslint src/**/*.ts __tests__/**/*.ts",
     "test": "jest",
     "serverless": "sls offline start"
   },

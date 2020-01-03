@@ -1,3 +1,3 @@
 export default interface HtmlFetcher {
-    fetchHtml(url:string): Promise<string>;
-};
+    fetchHtml(url: string): Promise<string>;
+}

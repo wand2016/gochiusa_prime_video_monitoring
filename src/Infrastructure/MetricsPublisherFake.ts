@@ -5,10 +5,10 @@ import MetricsPublisher from "@app/Domain/MetricsPublisher";
 @injectable()
 export default class MetricsPublisherFake implements MetricsPublisher {
 
-    publishedMetrics = [];
+    public publishedMetrics = [];
 
-    async publishMetrics(contents: Content[]): Promise<void> {
-        contents.forEach(content => {
+    public async publishMetrics(contents: Content[]): Promise<void> {
+        contents.forEach((content) => {
             this.publishedMetrics.push([content.getName(), content.getUrl(), content.isAvailable()]);
         });
     }
