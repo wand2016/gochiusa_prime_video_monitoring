@@ -1,0 +1,2 @@
+# gochiusa_prime_video_monitoring
+Amazon Prime Videoのごちうさの死活監視用
