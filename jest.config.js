@@ -19,6 +19,6 @@ module.exports = {
       "^@tests/(.+)$": "<rootDir>/__tests__/$1"
   },
   "setupFiles": [
-    "./src/inversify.config.ts"
+    "./__tests__/jest.setup.ts",
   ]
 }
